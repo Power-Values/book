@@ -48,53 +48,6 @@
     
     <main>
 
-        <section class="hero">
-            <div class="container hero-container-new">
-                
-                <div class="hero-main-grid">
-                    <div class="hero-column-left">
-                        <div class="value-certificate" id="hero-cert-container">
-                            <img src="images/loyaltycert.svg" id="certificate-image" alt="Your #1 Power Value is Loyalty">
-                        </div>
-                        <div class="hero-actions-container">
-                            <p class="share-label">Share Via</p>
-                            <div class="actions-row">
-                                <div class="share-buttons">
-                                   <a id="share-twitter" href="#" class="social-icon-link hero-icon" aria-label="Share on Twitter" target="_blank" rel="noopener noreferrer">
-                                       <img src="images/icons/twitter-heroarea.svg" alt="Share on Twitter">
-                                   </a>
-                                   <a id="share-facebook" href="#" class="social-icon-link hero-icon" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer">
-                                       <img src="images/icons/facebook-heroarea.svg" alt="Share on Facebook">
-                                   </a>
-                                   <a id="share-linkedin" href="#" class="social-icon-link hero-icon" aria-label="Share on LinkedIn" target="_blank" rel="noopener noreferrer">
-                                       <img src="images/icons/Linkedin-heroarea.svg" alt="Share on LinkedIn">
-                                   </a>
-                                   <a id="share-instagram" href="https://www.instagram.com/mypowervalues" class="social-icon-link hero-icon" aria-label="Visit our Instagram" target="_blank" rel="noopener noreferrer">
-                                       <img src="images/icons/instagram-heroarea.svg" alt="Share on Instagram">
-                                   </a>
-                               </div>
-                            </div>
-                       </div>
-                    </div>
-
-                    <div class="hero-column-right">
-                        <h1 id="hero-h1">Your #1 Power Value is… <span id="value-name">Loyalty</span></h1>
-                        <h2 id="hero-h2">This is the spark that, when honored, unlocks your fullest potential.</h2>
-                        <p class="hero-body" id="hero-body">
-                            Your full hierarchy of 10 Power Values has been sent to your inbox. Inside, you’ll see what each value means for your choices, your relationships, and your future direction. (If it’s not there yet, check Promotions or Spam.)
-                        </p>
-                        <p class="bridge-cta" id="hero-cta">
-                            Knowing your values is powerful. <strong>Living them daily is transformational.</strong>
-                        </p>
-                        <div class="hero-download-action">
-                            <a href="#" class="button button-secondary button-small" target="_blank" rel="noopener noreferrer">Download Certificate</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
         <section class="book-visual">
             <div class="container">
                 <div class="book-promo-grid">
@@ -106,6 +59,7 @@
                         <p class="bridge-cta">
                             You won't just gain insights; you'll get a personalized roadmap to lasting success and fulfillment. <strong>Let’s unlock the power within you.</strong>
                         </p>
+                        <a href="https://www.amazon.com/Power-Values-Design-Around-Matters-ebook/dp/B0FMSXNXZC/ref=sr_1_1?crid=2RBXLKVUD7JEA&dib=eyJ2IjoiMSJ9.wQF3solYVg4bjQgujuXVMQ.-Hex4lEN1aTx3AdDQGa1ZFJe8owGsVAH9ZpY1-Z3-VA&dib_tag=se&keywords=power+values+jonathan+Keim&qid=1756469848&sprefix=power+values+jonathan+k%2Caps%2C736&sr=8-1" class="button" target="_blank" rel="noopener noreferrer">Buy the Book Now</a>
                     </div>
                     <div class="book-image-column">
                         <div class="book-visual-container" id="open-flipbook">
@@ -465,18 +419,6 @@
         const value2 = params.get('value2');
         const value3 = params.get('value3');
         
-        const certificateImage = document.getElementById('certificate-image');
-        if (value1 && certificateImage) {
-            const sanitizedValue = value1.toLowerCase().replace(/[^a-z0-9]/gi, '');
-            certificateImage.src = `images/certificates/${sanitizedValue}.png`;
-            certificateImage.alt = `Your #1 Power Value is ${value1}`;
-            
-            const valueNameSpan = document.getElementById('value-name');
-            if (valueNameSpan) {
-                valueNameSpan.textContent = value1;
-            }
-        }
-
         // --- 3. UPDATE SOCIAL SHARE LINKS ---
         const shareTwitterBtn = document.getElementById('share-twitter');
         const shareFacebookBtn = document.getElementById('share-facebook');
